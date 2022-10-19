@@ -16,8 +16,8 @@ The following is a set of guidelines for those who wish to contribute. This guid
       - [Commit Messages](#commit-messages)
       - [Issues](#issues)
       - [Code Style Guide](#code-style-guide)
-  - [Semver spec](#semver-spec)
-  - [Git Flow and Ozmosis Widgeting](#git-flow-and-ozmosis-widgeting)
+    - [Semantic Versioning Specification](#semantic-versioning-specification)
+  - [Git Flow](#git-flow)
   
 ## IDE Setup
 
@@ -66,6 +66,8 @@ We are recommending that commit messages should be done in the following manner.
 ↪️ refactor: short_description /** if files/docs are refactored to be smarter TM */
 ```
 
+> If using Gitmoji, the commit types you will see will be restricted to the kind above. This does not stop you from committing anything though. Just use them as a guide.
+
 #### Issues
 
 #### Code Style Guide
@@ -73,44 +75,72 @@ We are recommending that commit messages should be done in the following manner.
 Code should satisfy the following:
 
 - Variable names in `snake_case`.
-- Function names in `camelCase`.
+- Function and file names in `camelCase`.
 - Have no `lint` issues.
-  - There is a recommended VSCode Extension in the repository.
+  - There is recommended VSCode Extensions in the repository.
 - Have meaningful file names, directory names, and directory structure. We have provided a baseline.
 - Have a scope for any refactoring, scaling, or general fixes.
 
-## Semver spec
+### Semantic Versioning Specification
 
-Utilization of the below schema for semantic versioning should be followed:
+Ozmosis Widget will be adhering to a [Semantic Versioning](https://semver.org/spec/v2.0.0.html). Follow the below guide:
 
 - `<major>.<minor>.<patch>`
 - If needing to use an `alpha`, `beta`, or `rc` build, please add the following after `<patch>`
   - *Alpha:* `-alpha+<YYYYMMDD>.<HHMM>`
+    - `HHMM` should be UTC
   - *Beta:* `-beta+<YYYYMMDD>.<HHMM>`
-  - *RC (Release Candidate):* -`rc.<number>`
+    - `HHMM` should be UTC
+  - *RC (Release Candidate):* -`rc.<build_number>`
 
----
+> *Note:*
+>
+> - `Alpha` is generally more unstable than `beta` which is more unstable than a `rc`
+> - Traditionally with software there is a `v` in front of the semver, such as: `v0.1.0`
+>
+> [`Git Flow`](#git-flow) handles this for creation of tags and is **not** needed by a user.
+>
+> The versioning should go `X.X.0-alpha` THEN `X.X.0-beta` THEN `X.X.0-rc` THEN `X.X.0`.
+>
+> The initial release of this project will be: `0.1.0`.
 
-## Git Flow and Ozmosis Widgeting
+Examples:
 
-We will be utilizing `Git Flow` in order to work as efficiently as possible. Here is a helpful guide in expectations:
+```md
+- Alpha Build:  0.1.0-alpha+20221019.1931
+- Beta Build:   0.1.0-beta+20221019.1945
+- RC Build:     0.1.0-rc.1
+- Release:      0.1.0
+```
 
-- `git flow feature start <feature_name>`
-  - Starts a branch named: `feat/<feature_name>`
-  - This branch is based on the `/dev` branch.
-- `git flow bugfix start <bug_name>`
-  - Starts a branch named: `bugfix/<bug_name>`
-  - Based on the `/dev` branch.
-- `git flow hotfix start <hotfix_name>`
-  - Starts a branch named: `hotfix/<hotfix_name>`
-  - Based on `/main` branch.
-  - **Note: Generally used after a release for quick fixes.**
-- `git flow release start <version>`
-  - Starts a new release branch under `release/<version>`
-  - Based on `/dev` branch by default but can be based on a different base.
-- `git flow support start <version> <base>`
-  - Starts a support branch for a particular version of the `/main` branch.
-  - Should only be used when needing to affect the `/main` branch. Ideal example flow would be:
+## Git Flow
+
+We will be utilizing [`Git Flow`](https://git.logikum.hu/graph/) in order to work as efficiently as possible. *`Git Flow` automatically prepends the version number with a v in this repository.* Here is a helpful guide in expectations:
+
+- When starting a new feature creation process use:
+  - `git flow feature start <feature_name>`
+    - Starts a branch named: `feat/<feature_name>`
+    - This branch is based on the `/dev` branch.
+- When providing a bug fix to a feature use:
+  - `git flow bugfix start <bug_name> feat/<feature_name>`
+- Or, if directly fixing from the `/dev` branch:
+  - `git flow bugfix start <bug_name>`
+    - Starts a branch named: `feat/bugfix/<bug_name>` or `bugfix/<bug_name>` respectively
+  - If a feature is not referenced, the branch is based on `/dev`.
+- If needing to provide a hotfix for a release:
+  - `git flow hotfix start <version>`
+    - Starts a branch named: `hotfix/<version>`
+    - Based on `/main` branch.
+    - Once `git flow hotfix finish <version>` is run, a copy is also pushed to `/dev`
+    - **Note: Generally used after a release for quick fixes.**
+- When it is appropriate use the below to indicate final linting and checks:
+  - `git flow release start <version>`
+    - Starts a new release branch under `release/<version>`
+    - Based on `/dev` branch by default but can be based on a different base.
+- Sometimes we need to do support work on *previous* versions:
+  - `git flow support start <version> <base>`
+    - Starts a support branch for a particular version of the `/main` branch.
+    - Should only be used when needing to affect the `/main` branch. Ideal example flow would be:
 
 ```sh
 git flow support start 0.1.0 main

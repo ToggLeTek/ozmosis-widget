@@ -7,5 +7,48 @@
     "cSpell.language": "en,lorem,en-GB",
     "[markdown]": {
         "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    },
+    "gitmoji.additionalEmojis": [
+          {
+            "emoji": "✨ feat:",
+            "code": ":sparkles:",
+            "description": "Adding a feature!"
+          },
+          {
+            "emoji": "🐛 bugfix:",
+            "code": ":bug:",
+            "description": "Fixing a bug."
+          },
+          {
+            "emoji": "⚠️ hotfix:",
+            "code": ":warning:",
+            "description": "Commiting a critical hotfix."
+          },
+          {
+            "emoji": "🚩 release:",
+            "code": ":triangular_flag_on_post:",
+            "description": "Sneding a release commit."
+          },
+          {
+            "emoji": "⚡️ support:",
+            "code": ":zap:",
+            "description": "Providing support to an already released version."
+          },
+          {
+            "emoji": "📝 lint:",
+            "code": ":pencil:",
+            "description": "Linting a file or multiple files."
+          },
+          {
+            "emoji": "📚 docs:",
+            "code": ":books:",
+            "description": "Adding or fixing documentationm"
+          },
+          {
+            "emoji": "↪️ refactor:",
+            "code": ":arrow_right_hook:",
+            "description": "Refactoring code."
+          }
+        ],
+    "gitmoji.onlyUseAdditionalEmojis": true
     }
-}

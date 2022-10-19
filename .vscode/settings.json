@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "emojisense",
+        "Gitmoji",
+        "Ozmosis"
+    ],
+    "cSpell.language": "en,lorem,en-GB",
+    "[markdown]": {
+        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
+    }
+}

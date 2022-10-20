@@ -1,7 +1,7 @@
 import { FeatureProps } from '../components';
 
 export const products: FeatureProps[] = [
-  {
+/**  {
     title: 'CosmosKit',
     text: 'A wallet adapter for react with mobile WalletConnect support for the Cosmos ecosystem.',
     href: 'https://github.com/cosmology-tech/cosmos-kit'
@@ -30,11 +30,11 @@ export const products: FeatureProps[] = [
     title: 'Videos',
     text: 'How-to videos from the official Cosmology website, with learning resources for building in Cosmos.',
     href: 'https://cosmology.tech/learn'
-  }
+  }  */
 ];
 
 export const dependencies: FeatureProps[] = [
-  {
+/**  {
     title: 'Chakra UI',
     text: 'A simple, modular and accessible React Component Library.',
     href: 'https://chakra-ui.com/docs/components/'
@@ -43,5 +43,5 @@ export const dependencies: FeatureProps[] = [
     title: 'Next.js',
     text: 'A React Framework supports hybrid static & server rendering.',
     href: 'https://nextjs.org/'
-  }
+  } */
 ];

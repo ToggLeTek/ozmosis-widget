@@ -1612,6 +1612,26 @@
     "@ethersproject/bytes" "^5.7.0"
     "@ethersproject/logger" "^5.7.0"
 
+"@fontsource/bagnard@^4.5.4":
+  version "4.5.4"
+  resolved "https://registry.yarnpkg.com/@fontsource/bagnard/-/bagnard-4.5.4.tgz#d773f0075d7012682af19441bf885a719c8e25d5"
+  integrity sha512-BYLaN8ZRMI9ntOncCZfpKA6zJmdzWqPZdb7Mr2xG09twAcI6F69MWORGG39EEJn+pU1DqXn6ajTHrmPOY+mmvw==
+
+"@fontsource/golos-ui@^4.5.3":
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/@fontsource/golos-ui/-/golos-ui-4.5.3.tgz#15455fbd8465f39633cfb575195e64d119aa1e2e"
+  integrity sha512-TIU72flYhSmg3L7XURurAsihV8W3IdiIFMMtfO41NmGOyi1V6eYiOIVpFINFecbBf291JOMUgWosybkWDZVaaQ==
+
+"@fontsource/nova-cut@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/nova-cut/-/nova-cut-4.5.8.tgz#ce3252308b618f86560940edd983600394ae2517"
+  integrity sha512-bYiZMye5IejKFh8ewPERB0/aGrax8H7CgzJChxxdbBDt0IdpPBZ+lQgtCw80fAYHmmtRacCkrWFOAghMinIbXg==
+
+"@fontsource/rock-salt@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/rock-salt/-/rock-salt-4.5.8.tgz#ef409b4487359260a23ee0b83db81e7ec3e3010f"
+  integrity sha512-ZiAYV+CSSGmTOeQuqNlfJbFC1AQRm3JMu+GuU5XHAI8UGC3kp5oQP6bGCZVwCRAxawBvuq38ww7F8cdat6ZyXg==
+
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.7"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.7.tgz#6d53769fd0c222767e6452e8ebda825c22e9f0dc"

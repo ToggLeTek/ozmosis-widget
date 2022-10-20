@@ -5,7 +5,6 @@ import { SigningStargateClient } from '@cosmjs/stargate';
 import { cosmos } from 'osmojs';
 
 export const chainName = 'osmosis';
-// export const chainName = 'osmosistestnet';
 
 export const chainassets: AssetList = assets.find(
     (chain) => chain.chain_name === chainName

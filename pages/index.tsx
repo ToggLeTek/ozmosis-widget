@@ -95,27 +95,6 @@ export default function Home() {
         </Button>
       </Flex>
       <Box textAlign="center">
-        <Heading
-          as="h1"
-          fontSize={{ base: '3xl', sm: '4xl', md: '5xl' }}
-          fontWeight="extrabold"
-          mb={3}
-        >
-          Create Cosmos App
-        </Heading>
-        <Heading
-          as="h1"
-          fontWeight="bold"
-          fontSize={{ base: '2xl', sm: '3xl', md: '4xl' }}
-        >
-          <Text as="span">Welcome to&nbsp;</Text>
-          <Text as="span" color={color}>
-            CosmosKit + Next.js +{' '}
-            <a href={library.href} target="_blank" rel="noreferrer">
-              {library.title}
-            </a>
-          </Text>
-        </Heading>
       </Box>
       <WalletSection />
 
@@ -135,17 +114,6 @@ export default function Home() {
       {walletStatus === WalletStatus.Connected && (
         <Box textAlign="center">
           <Flex mb={4}>
-            <Button
-              variant="outline"
-              onClick={sendTokens(
-                getStargateClient as () => Promise<SigningStargateClient>,
-                setResp as () => any,
-                address as string
-              )}
-            >
-              Send Tokens (to self)
-            </Button>
-            <Text as="span">Balance&nbsp;</Text>
             <Text as="span" color={color}>
               Balance: {balance.toNumber()}
             </Text>

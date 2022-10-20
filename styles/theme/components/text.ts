@@ -1,13 +1,19 @@
 /* Defining the base style and variants of the text. */
 const Text = {
     baseStyle: {
-        fontFamily: 'Texturina', // TODO: Must be yeeted.
+        fontFamily: 'Golos Ui',
         fontWeight: '400'
       },
       variants: {
         'footer': {
             fontSize: '0.7rem',
             lineHeight: '0.95rem', 
+        },
+        'bold': {
+            fontWeight: '600' 
+        },
+        'medium': {
+            fontWeight: '500' 
         },
     },
 };

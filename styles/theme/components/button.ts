@@ -1,7 +1,7 @@
 /* Defining the default options for buttons */
 const Button = {
     baseStyle: {
-        fontFamily: 'Gentium Plus', // TODO: This font must be yeeted.
+        fontFamily: 'Golos Ui',
         fontWeight: '400',
         bg: 'brand.pacific.0',
         borderRadius: '0.8rem',

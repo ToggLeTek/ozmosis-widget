@@ -19,7 +19,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react';
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs';
-import { chainassets, chainName, coin, dependencies, products, sendTokens } from '../config';
+import { chainassets, chainName, coin, dependencies, products } from '../config';
 
 import { WalletStatus } from '@cosmos-kit/core';
 import { Product, Dependency, WalletSection } from '../components';

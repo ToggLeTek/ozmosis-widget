@@ -15,6 +15,8 @@ import {
   Button,
   Flex,
   Icon,
+  useColorMode,
+  useColorModeValue
 } from '@chakra-ui/react';
 import { chainassets, chainName, coin } from '../config';
 
@@ -24,6 +26,7 @@ import { cosmos } from 'osmojs';
 import Head from 'next/head';
 
 export default function Home() {
+  const { colorMode, toggleColorMode } = useColorMode();
 
   const {
     getStargateClient,
@@ -72,6 +75,7 @@ export default function Home() {
     }
   };
 
+  const color = useColorModeValue('primary.500', 'primary.200');
   return (
     <Container maxW="5xl" py={10}>
       <Head>
@@ -99,7 +103,7 @@ export default function Home() {
       {walletStatus === WalletStatus.Connected && (
         <Box textAlign="center">
           <Flex mb={4}>
-            <Text as="span">
+            <Text as="span" color={color}>
               Balance: {balance.toNumber()}
             </Text>
 

@@ -13,17 +13,7 @@ import {
   Select,
   List
 } from '@chakra-ui/react';
-import { getLogo, selectableAssets } from '../../config/ozmology'
-import { useEffect, useMemo } from 'react';
-import {
-  ChainCard
-} from '..';
-import { ChainName } from '@cosmos-kit/core';
-import { MissingToken } from '../icons'
-import { asset_list as chainAssets } from '@chain-registry/osmosis';
-import build from 'next/dist/build';
-
-let chosenAsset = getLogo('OSMO');
+import { mage_token } from '../customIcons'
 
 export function TopAssetSection() {
     return (
@@ -40,7 +30,7 @@ export function TopAssetSection() {
           ml={3}>
           <GridItem>
             <Avatar
-              src={chosenAsset}
+              as={mage_token}
               size={'xl'} />
               </GridItem>
               <GridItem
